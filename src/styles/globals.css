@@ -3,3 +3,7 @@
 :root {
   --primary-font-family: 'Chakra Petch';
 }
+
+body {
+  margin: 0;
+}
