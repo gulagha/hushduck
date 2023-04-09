@@ -1,7 +1,138 @@
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
+import { MessageForm } from '@/components/messageForm/MessageForm'
+import { MessagesList } from '@/components/messagesList/MessagesList'
 
 export default function Home() {
+  const messages = [
+    {
+      message: 'Hello',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Salam qaqa',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Nerbaladi xalodelnik ustasi',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Hello',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Salam qaqa',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Nerbaladi xalodelnik ustasi',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Hello',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Salam qaqa',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Nerbaladi xalodelnik ustasi',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Hello',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Salam qaqa',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Nerbaladi xalodelnik ustasi',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Hello',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Salam qaqa',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Nerbaladi xalodelnik ustasi',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Hello',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Salam qaqa',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Nerbaladi xalodelnik ustasi',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Hello',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Salam qaqa',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    },
+    {
+      message: 'Nerbaladi xalodelnik ustasi',
+      senderId: 1,
+      userName: 'John',
+      timestamp: new Date().getTime(),
+    }
+  ];
+
   return (
     <>
       <Head>
@@ -11,7 +142,14 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        Salam
+        <div />
+        <div className={styles.chatContainer}>
+          <div className={styles.chat}>
+            <MessagesList messages={messages} />
+            <MessageForm />
+          </div>
+        </div>
+        <div />
       </main>
     </>
   )
