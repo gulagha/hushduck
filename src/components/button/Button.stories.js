@@ -16,7 +16,15 @@ export default {
 export const Primary = {
   args: {
     primary: true,
-    label: 'Button',
+    label: 'Primary Button',
+    children: 'Button'
+  },
+};
+
+export const Secondary = {
+  args: {
+    primary: false,
+    label: 'Secondary Button',
     children: 'Button'
   },
 };
