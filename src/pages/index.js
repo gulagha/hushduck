@@ -1,137 +1,15 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import styles from '@/styles/Home.module.css'
 import { MessageForm } from '@/components/messageForm/MessageForm'
 import { MessagesList } from '@/components/messagesList/MessagesList'
 
 export default function Home() {
-  const messages = [
-    {
-      message: 'Hello',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Salam qaqa',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Nerbaladi xalodelnik ustasi',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Hello',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Salam qaqa',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Nerbaladi xalodelnik ustasi',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Hello',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Salam qaqa',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Nerbaladi xalodelnik ustasi',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Hello',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Salam qaqa',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Nerbaladi xalodelnik ustasi',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Hello',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Salam qaqa',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Nerbaladi xalodelnik ustasi',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Hello',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Salam qaqa',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Nerbaladi xalodelnik ustasi',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Hello',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Salam qaqa',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    },
-    {
-      message: 'Nerbaladi xalodelnik ustasi',
-      senderId: 1,
-      userName: 'John',
-      timestamp: new Date().getTime(),
-    }
-  ];
+  const [messages, setMessages] = useState([]);
+
+  const onSend = (message) => {
+    if(message.message) setMessages([...messages, message]);
+  };
 
   return (
     <>
@@ -144,9 +22,10 @@ export default function Home() {
       <main className={styles.main}>
         <div />
         <div className={styles.chatContainer}>
+          <img className={styles.logo} src='logo.png' />
           <div className={styles.chat}>
-            <MessagesList messages={messages} />
-            <MessageForm />
+            <MessagesList selfId={1} messages={messages} />
+            <MessageForm onSend={onSend} />
           </div>
         </div>
         <div />

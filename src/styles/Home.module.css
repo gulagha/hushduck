@@ -1,8 +1,7 @@
 .main {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr minmax(200px, 800px) 1fr;
   height: 100%;
-  grid-template-rows: 1fr;
   justify-content: center;
 }
 
@@ -10,17 +9,27 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .chat {
-  max-height: calc(100vh - 160px);
+  height: calc(100vh - 180px);
   display: grid;
   grid-template-rows: 1fr 50px;
   grid-gap: 20px;
   background-color: white;
-  margin: 30px 0;
-  padding: 20px;
-  margin-bottom: 40px;
+  padding: 15px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
   border-radius: 10px;
   border: 3px solid black;
+  width: calc(100% - 17vw);
+  min-width: 200px;
+}
+
+.logo {
+  position: sticky;
+  width: 154px;
+  aspect-ratio: 204 / 38;
 }

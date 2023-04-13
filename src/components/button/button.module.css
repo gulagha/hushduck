@@ -21,12 +21,12 @@
 }
 
 .primaryButton {
-  background-color: #204EA4;
+  background-color: #2557b4;
   color: #ffffff;
 }
 
 .primaryButton:hover {
-  background-color: #004578;
+  background-color: #1848a1;
 }
 
 .primaryButton:active {

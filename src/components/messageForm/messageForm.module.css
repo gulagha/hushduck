@@ -1,5 +1,5 @@
 .form {
   display: grid;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: minmax(10px, 1fr) minmax(60px, 100px);
   grid-gap: 10px;
 }
