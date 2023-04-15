@@ -20,6 +20,9 @@ export default function Home() {
   return (
     <div className={styles.homeContainer}>
       <div />
+      <div />
+      <div />
+      <div />
       <div className={styles.chatContainer}>
         <img className={styles.logo} src='logo.png' />
         <div className={styles.chat}>
@@ -27,6 +30,9 @@ export default function Home() {
           <MessageForm onSend={onSend} />
         </div>
       </div>
+      <div />
+      <div />
+      <div className={styles.footerMessage}> Messages are offline and will be removed after the refresh </div>
       <div />
     </div>
   )

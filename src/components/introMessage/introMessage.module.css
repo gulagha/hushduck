@@ -9,11 +9,11 @@
   justify-content: center;
   grid-gap: 20px;
   padding: 40px 20px;
+  padding-top: 20px;
   max-height: 400px;
   max-width: 400px;
   justify-self: center;
   align-self: center;
-  border: dashed 2px #000000;
   overflow-y: scroll;
 }
 
@@ -22,6 +22,9 @@
   font-weight: 800;
   max-width: 250px;
   justify-self: center;
+  background-color: #ffedb1;
+  padding: 5px;
+  display: inline;
 }
 
 .step {
@@ -39,9 +42,4 @@
 .normal {
   font-weight: 400;
   font-size: 14px;
-}
-
-.duck {
-  width: 40px;
-  height: 40px;
 }

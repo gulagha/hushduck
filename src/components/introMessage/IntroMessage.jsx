@@ -7,11 +7,8 @@ export const IntroMessage = () => {
   return (
     <div className={styles.introMessage}>
       <div className={styles.moto}> 
-        <Image className={styles.duck} src="/duck.png" alt="Logo" width={100} height={100} />
-        <div>
-          Unlocking Insights 
-          Through Self-Dialogue
-        </div>
+        <div> Unlocking Insights </div>
+        <div> Through Self-Dialogue </div>
       </div>
       <div className={styles.step}> 
         <span className={styles.bold}> 
