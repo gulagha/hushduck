@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import styles from './messagesList.module.css';
 import { MessageBubble } from '../message/MessageBubble';
 
 export const MessagesList = ({ messages, selfId }) => {
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
+
   let messagesList = messages.map((messageObject, index) => {
     const {
       message, userName, timestamp, senderId
@@ -20,8 +30,13 @@ export const MessagesList = ({ messages, selfId }) => {
     }
   );
 
-  return <div className={styles.messagesList}>{messagesList}</div>;
-}
+  return (
+    <div className={styles.messagesList}>
+      {messagesList}
+      <div ref={messagesEndRef}></div>
+    </div>
+  );
+};
 
 MessagesList.propTypes = {
   messages: PropTypes.arrayOf(
