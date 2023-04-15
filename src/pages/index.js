@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styles from './index.module.css';
 import { MessageForm } from '@/components/messageForm/MessageForm'
 import { MessagesList } from '@/components/messagesList/MessagesList'
+import { IntroMessage } from '@/components/introMessage/IntroMessage';
 
 export default function Home() {
   const [messages, setMessages] = useState([]);
@@ -11,13 +12,18 @@ export default function Home() {
     if(message.message) setMessages([...messages, message]);
   };
 
+  const renderMessages = () => {
+    if(messages.length === 0) return <IntroMessage />
+    return <MessagesList selfId={1} messages={messages} /> 
+  }
+
   return (
     <div className={styles.homeContainer}>
       <div />
       <div className={styles.chatContainer}>
         <img className={styles.logo} src='logo.png' />
         <div className={styles.chat}>
-          <MessagesList selfId={1} messages={messages} />
+          {renderMessages()}
           <MessageForm onSend={onSend} />
         </div>
       </div>
