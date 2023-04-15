@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './introMessage.module.css';
-import Image from 'next/image'
 
 export const IntroMessage = () => {
   return (
@@ -12,18 +11,10 @@ export const IntroMessage = () => {
       </div>
       <div className={styles.step}> 
         <span className={styles.bold}> 
-          🎯 Identify the challenge
-        </span>
-        <span className={styles.normal}> 
-          Identify a topic or challenge you&apos;d like to explore during your self-dialogue session.
-        </span>
-      </div>
-      <div className={styles.step}> 
-        <span className={styles.bold}> 
           💬 Start the Conversation
         </span>
         <span className={styles.normal}> 
-          Begin your self-dialogue by typing a message from one perspective
+          Begin your self-dialogue by describing your challenge.
         </span>
       </div>
       <div className={styles.step}> 

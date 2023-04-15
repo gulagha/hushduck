@@ -14,7 +14,7 @@
 }
 
 .chat {
-  height: 100%;
+  height: calc(100vh - 180px);
   display: grid;
   grid-template-rows: 1fr 50px;
   grid-gap: 20px;

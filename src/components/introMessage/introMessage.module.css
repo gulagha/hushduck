@@ -2,7 +2,7 @@
   background-color: #ffffff;
   border-radius: 5px;
   display: grid;
-  grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr;
   font-family: 'Chakra Petch', sans-serif;
   text-align: center;
   align-items: center;
