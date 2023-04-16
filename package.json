@@ -11,6 +11,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@vercel/analytics": "^0.1.11",
     "classnames": "^2.3.2",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",

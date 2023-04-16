@@ -30,7 +30,7 @@ export const IntroMessage = () => {
 }
 
 IntroMessage.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   primary: PropTypes.bool,
   onClick: PropTypes.func
 };
